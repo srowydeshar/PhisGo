@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mission Failed</title>
+        <link rel="stylesheet" href="../mission/mission_success.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>🕵️ HMM...</h1>
+            <p>
+                Didn't think you'd be that smart.
+            </p>
+            <p>
+                You noticed the suspicious signs.
+            </p>
+            <button id="continueBtn">
+                Continue to Mission
+            </button>
+        </div>
+        
+        <script>
+            document.getElementById("contineuBtn")
+            .addEventListener("click", function(){
+                window.location.href = "../game/dash/user_view.html";
+            });
+        </script>
+
+        <video autoplay muted loop id="bg-video">
+            <source src="../visuals/108813-681686688.mp4" type="video/mp4">
+        </video>
+    </body>
+</html>

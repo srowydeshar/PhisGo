@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Mission Failed</title>
+        <link rel="stylesheet" href="../mission/mission_failed.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>😈 GOTCHA!</h1>
+            <p>You clicked the phishing link.</p>
+
+            <button id="continueBtn">
+                Continue To Mission
+            </button>
+        </div>
+
+        <script>
+            document.getElementById("continueBtn")
+            .addEventListener("click", function() {
+                window.location.href = "../game/dash/user_view.html";
+            });
+        </script>
+
+        <video autoplay muted loop id="bg-video">
+            <source src="../visuals/108813-681686688.mp4" type="video/mp4">
+        </video>
+    </body>
+</html>
