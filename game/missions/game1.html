@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Character Creation</title>
+        <link rel="stylesheet" href="game1.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    </head>
+
+    <body>
+        <div id="intro-screen" class="overlay">
+            <div class="modal-box">
+                <h1>WELCOME TO THE DIGITAL FRONTIER</h1>
+                <p>IT IS TIME TO MARK YOUR DIGITAL FOOTPRINT FOR PHISGO.</p>
+                <button id="start-btn">Let's Get Started</button>
+            </div>
+        </div>
+
+        <div id="game-container" class="blurred">
+            <div id="map-section" class="screen-stage active">
+                <h2 class="section-title">SELECT YOUR BIRTH COUNTRY</h2>
+                <p class="subtitle">Click and drag to rotate the planet. CLick a country pin to select your origin.</p>
+                <div id="planet-3d-viewport"></div>
+                <div class="selection-ui">
+                    <p>
+                        Selected Coordinate Matrix: <span id="dispaly-country-preview">None</span>
+                    </p>
+                    <button id="confirm-country-btn" disabled>CONFIRM SELECTION</button>
+                </div>
+            </div>
+            <div id="customizer-section" class="screen-stage">
+                <p class="section-title">Origin: <span id="display-country">None</span></p>
+                <div class="form-group">
+                    <label>Identity Handle (Name):</label>
+                    <input type="text" id="char-name" placeholder="Enter handle..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Avatar Core (Gender):</label>
+                    <div class="radio-toggle">
+                        <input type="radio" id="gender-boy" name="gender" value="Boy" checked>
+                        <label for="gender-boy">Boy</label>
+
+                        <input type="radio" id="gender-girl" name="gender" value="Girl">
+                        <label for="gender-girl">Girl</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Home Architecture</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Core Career Node:</label>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Lifestyle and Hobbies:</label>
+                    <textarea id="hobbies" rows="3" placeholder="E.g., singing, dancing, reading">
+                    </textarea>
+                </div>
+
+                <button type="button" id="manifest-btn" class="submit-btn full-width">MANIFEST CHARACTER</button>
+            </div>
+
+            <div id="success-section" class="screen-stage">
+                <div class="success-box">
+                    <div class="checkmark-icon">✓</div>
+                    <h2>CITIZEN REGISTERED SUCCESSFULLY</h2>
+                    <div id="manifest-data-summary">*Migration protocols locked. To change residency later, navigate to municipal control panels.</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="game1.js"></script>
+    </body>
+</html>

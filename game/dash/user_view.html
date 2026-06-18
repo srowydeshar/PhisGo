@@ -17,39 +17,88 @@
             <div class="navcontainer">
                 <nav class="nav">
                    <div class="nav-upper-options">
-                        <div class="nav-option option1">
+                        <button class="nav-option option1" id="dashboard-btn">
                             <img src="../../visuals/icons/dashboard.png" class="nav-img" alt="dashboard" />
                             <h3>Dashboard</h3>
-                        </div>
+                        </button>
 
-                        <div class="nav-option option2">
+                        <button class="nav-option option2" id="scores-btn">
                             <img src="../../visuals/icons/scores.png" class="nav-img" alt="scores" />
                             <h3>Scores</h3>
-                        </div>
+                        </button>
                             
-                        <div class="nav-option option3">
+                        <button class="nav-option option3" id="progress-btn">
                             <img src="../../visuals/icons/progress.png" class="nav-img" alt="progress" />
                             <h3>Progress</h3>
-                        </div>
+                        </button>
 
-                        <div class="nav-option option4">
+                        <button class="nav-option option4" id="news-btn">
                             <img src="../../visuals/icons/threat_news.png" class="nav-img" alt="threat news" />
                             <h3>Threat News</h3>
-                        </div>
+                        </button>
 
-                        <div class="nav-option option5">
+                        <button class="nav-option option5" id="profile-btn">
                             <img src="../../visuals/icons/profile.png" class="nav-img" alt="profile" />
                             <h3>Profile</h3>
-                        </div>
+                        </button>
                             
-                        <div class="nav-option logout">
+                        <button class="nav-option logout" id="logout-btn">
                             <img src="../../visuals/icons/logout.png" class="nav-img" alt="logout" />
                             <h3>Logout</h3>
-                        </div>
+                        </button>
                     </div>
                 </nav>
             </div>
-                
+        <div id="dashboard-page" class="page active">
+            <div class="dashboard-content">
+                <div class="dashboard-grid">
+                    <div class="game-card" id="game1">
+                        <h2>GAME1</h2>
+                        <p>Working on it</p>
+                    </div>
+
+                    <div class="game-card" id="game2">
+                        <h2>GAME2</h2>
+                        <p>Working on it</p>
+                    </div>
+
+                    <div class="game-card" id="game3">
+                        <h2>GAME3</h2>
+                        <p>Working on it</p>
+                    </div>
+
+                    <div class="game-card" id="othergames">
+                        <h2>OTHER GAMES</h2>
+                        <p>Working on it</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div id="scores-page" class="page">
+            <div class="score-content">
+                <h1>Scores</h1>
+                <div class="score-table">
+                    <p>Total Score: 500</p>
+                    <p>Highest Score: 700</p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="progress-page" class="page">
+            <h1>Progress</h1>
+        </div>
+
+        <div id="news-page" class="page">
+            <h1>news</h1>
+        </div>
+
+        <div id="profile-page" class="page">
+            <h1>Profile</h1>
+        </div>
+
+        </div>
+        <script src="user_view.js"></script>
+
     </body>
 </html>

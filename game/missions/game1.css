@@ -1,0 +1,159 @@
+/**@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+:root {
+    --bg-space: #03030a;
+    --hacker-purple: #9a4bfa; 
+    --hacker-blue: #00e5ff; 
+    --hacker-chaotic: #ff007f;
+    --text-main: #e2e8f0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-space);
+    font-family: 'Orbitron', Courier, monospace;
+    color: var(--text-main);
+    overflow: hidden;
+}
+
+.blurred {
+    filter: blur(10px);
+    pointer-events: none;
+    transition: filter 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(3, 3, 10, 0.9);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.overlay.hide {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.05);
+}
+
+.modal-box, .success-box {
+    background: linear-gradient(135deg, rgba(154, 75, 250, 0.05), rgba(0, 229, 255, 0.05));
+    border: 2px solid var(--hacker-blue);
+    box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+}
+
+.screen-stage {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+}
+
+.screen-stage.active {
+    display: flex;
+}
+
+/* 3D PLANET VIEWPORT CANVAS WRAPPER *//*
+#planet-3d-viewport {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 2px dashed var(--hacker-purple);
+    box-shadow: 0 0 30px rgba(154, 75, 250, 0.3);
+    margin: 20px 0;
+    cursor: grab;
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#planet-3d-viewport:active {
+    cursor: grabbing;
+}
+
+.selection-ui {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Interactive Glowing Form Buttons *//*
+button {
+    background: transparent;
+    border: 1px solid var(--hacker-blue);
+    color: var(--hacker-blue);
+    padding: 12px 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover:not(:disabled) {
+    background: var(--hacker-blue);
+    color: #000;
+    box-shadow: 0 0 20px var(--hacker-blue);
+}
+
+button:disabled {
+    border-color: #333;
+    color: #555;
+    cursor: not-allowed;
+}
+
+/* Form Layout Configurations *//*
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--hacker-blue);
+}
+
+input[type="text"], select, textarea {
+    background: rgba(5, 5, 15, 0.8);
+    border: 1px solid var(--hacker-purple);
+    padding: 12px;
+    color: #fff;
+    font-family: inherit;
+    border-radius: 4px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--hacker-blue);
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+}
+
+.radio-toggle {
+    display: flex;
+    gap: 15px;
+}
+
+.full-width { width: 100%; }//

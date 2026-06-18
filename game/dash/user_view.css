@@ -13,7 +13,7 @@
     --background-color1: #46912b86;
     --background-color2: #577437;
     --background-color3: #242723;
-    --background-color4: #000000a4; 
+    --background-color4: #aabb6da4; 
     --primary-color: #38383d;
     --secondary-color: #2e2e30;
     --Border-color: #61aa67;
@@ -28,7 +28,7 @@ body {
 }
 
 header {
-    height: 80px;
+    height: 150px;
     width: 100vw;
     padding: 0 10px;
     background-color: var(--background-color1);
@@ -41,13 +41,13 @@ header {
 }
 
 .logo {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 50px;
+    font-weight: 1000;
     color: rgb(0, 172, 57);
 }
 
 .icn {
-    height: 45px;
+    height: 55px;
 }
 
 .menuicn {
@@ -55,23 +55,25 @@ header {
 }
 
 .logosec {
-    gap: 80px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .main-container{
     display: flex;
     width: 100vw;
     position: relative;
-    top: 80px;
+    top: 150px;
     z-index: 1;
 }
 
 .nav {
     min-height:95vh;
-    width: 250px;
+    width: 300px;
     background-color: var(--background-color2);
-    position:absolute;
-    top: -20px;
+    position:fixed;
+    top: 150px;
     left:00;
     box-shadow: 1px 1px 10px rgba(69, 255, 115, 0.825);
     display: flex;
@@ -83,7 +85,7 @@ header {
 }
 
 .navcontainer {
-    height: calc(1000vh - 70px);
+    height: calc(1000vh - 80px);
     width: 250px;
     position: relative;
     overflow-y:scroll;
@@ -96,12 +98,12 @@ header {
 }
 
 .navclose {
-    width: 8px;
+    width: 80px;
 }
 
 .nav-option {
-    width: 250px;
-    height: 170;
+    width: 300px;
+    height: 160px;
     display: flex;
     align-items: center;
     padding: 0 30px 0 20px;
@@ -133,8 +135,67 @@ header {
     cursor:pointer;
 }
 
-.option:hover {
+.nav-option:hover {
     border-left: 5px solid green;
     background-color: var(--Border-color);
 }
 
+.dashboard-content {
+    margin-left:150px;
+    width:100%;
+    padding:40px;
+}
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(500px,5fr));
+    gap:20px;
+}
+
+.game-card{
+    background: green;
+    min-height:500px;
+    border-radius: 100px;
+    padding:50px;
+    color:white;
+    transition:1.0s;
+}
+
+.game-card:hover{
+    transform:translate(-50px);
+    box-shadow: 0 0 20px rgb(220, 255, 63);
+}
+
+.game-card h2{
+    margin-bottom: 15px;
+}
+
+/*this is where i will be working for the pages*/
+.page{
+    display:none;
+    width:100%
+}
+
+.page.active{
+    display:block;
+}
+/*_---------------------------------------------------*/
+
+/*working on game card */
+.game-card{
+    background:green;
+    min-height:500px;
+    border:none;
+    outline:none;
+    border-radius:100px;
+    padding:50px;
+    color:white;
+    text-align:left;
+    cursor:pointer;
+    transition:1s;
+}
+
+.game-card h2,
+.game-card p{
+    pointer-events:none;
+}
