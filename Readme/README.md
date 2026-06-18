@@ -41,8 +41,7 @@ The project focuses on **learning through interaction rather than passive traini
 ##Technologies Used
 -HTML  
 -CSS  
--JavaScript  
-
+-JS
 
 ##Future Plans
 -Flask backend integration  
