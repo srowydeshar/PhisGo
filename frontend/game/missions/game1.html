@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhisGo - Cyber Matrix</title>
+    <link rel="stylesheet" href="game1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="../../visuals/planet-bg.mp4" type="video/mp4">
+    </video>
+    <div id="mission-portal" class="overlay-screen">
+        <div class="glass-terminal">
+            <h1 class="terminal-title">PHISGO PROTOCOL</h1>
+            <p class="terminal-sub">Select active node deployment matrix:</p>
+            <button id="mission-1-btn" class="glow-button">START MISSION 1</button>
+        </div>
+    </div>
+
+    <div id="intro-overlay" class="overlay-screen hidden">
+        <div class="holo-banner">
+            <h2>WELCOME TO THE DIGITAL FRONTIER</h2>
+            <p>It is time to mark your digital footprint for PHISGO.</p>
+            <button id="choose-country-btn" class="glow-button">CHOOSE YOUR COUNTRY</button>
+        </div>
+    </div>
+
+    <div id="game-interface" class="hidden">
+        <div id="game-container">
+            <h1 class="main-title">SELECT YOUR BIRTH COUNTRY</h1>
+            <div id="planet-3d-viewport"></div>
+            <div class="migration-note">Migration rules apply after entry.</div>
+        </div>
+
+        <div id="customizer-panel" class="holo-panel right-panel">
+            <div class="avatar-preview-box">
+                <div class="avatar-icon"></div>
+                <div class="avatar-stats">
+                    <p>Origin: <span id="preview-origin-lbl">AWAITING</span></p>
+                    <p>Career: <span id="preview-career-lbl">AWAITING</span></p>
+                </div>
+            </div>
+
+            <hr class="panel-divider">
+
+            <div class="form-group">
+                <label>Origin Country:</label>
+                <input type="text" id="origin-country-input" readonly placeholder="Click planet region...">
+            </div>
+
+            <div class="form-group">
+                <label>Identity Handle (Name):</label>
+                <input type="text" id="char-name" placeholder="Enter handle..." required>
+            </div>
+
+            <div class="form-group">
+                <label>Avatar Specialization:</label>
+                <select id="char-career" required>
+                    <option value="Child" selected>Child</option>
+                    <option value="Adult">Adult</option>
+                    <option value="Old">Old</option>
+                    
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Avatar Core (Gender):</label>
+                <div class="gender-selector">
+                    <button class="gender-btn active" data-gender="Male">Male</button>
+                    <span>/</span>
+                    <button class="gender-btn" data-gender="Female">Female</button>
+                </div>
+            </div>
+
+            <button type="button" id="manifest-btn" class="submit-btn">MANIFEST CHARACTER</button>
+        </div>
+    </div>
+
+    <script src="game1.js"></script>
+</body>
+</html>

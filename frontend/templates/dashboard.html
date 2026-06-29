@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1 id="typing"></h1>
+        </div>
+
+        <script src="{{ url_for('static', filename='dashboard.js') }}" defer></script>
+        <video autoplay muted loop id="bg-video">
+            <source src="{{ url_for('static', filename='visuals/27706-365890968.mp4') }}" type="video/mp4">
+        </video>
+    </body>
+
+</html>

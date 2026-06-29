@@ -34,9 +34,10 @@ function nextMessage() {
         typeText();
     } else {
         setTimeout(() => {
-            window.location.href = "../mission1_html/mission1.html";
+            window.location.href = "/mission1";
         }, 1500);
     }
 }
 
 typeText();
+

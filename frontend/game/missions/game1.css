@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+:root {
+    --bg-space: #010206;
+    --hacker-purple: #7a1ee6; 
+    --hacker-blue: #00e5ff; 
+    --text-main: #c4d1ec;
+    --panel-bg: rgba(5, 11, 28, 0.75);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-space);
+    font-family: 'Orbitron', sans-serif;
+    color: var(--text-main);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Cyber Space Matrix Lines Grid Overlay */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(rgba(0,229,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#bg-video{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+    opacity:0.4;
+}
+/* Fullscreen Overlay Windows styling */
+.overlay-screen {
+    position: fixed;
+    inset: 0;
+    background: rgba(2, 4, 12, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+.overlay-screen.hidden, #game-interface.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    position: absolute;
+}
+
+/* Terminal Glass Boxes */
+.glass-terminal, .holo-banner {
+    background: var(--panel-bg);
+    border: 2px solid var(--hacker-blue);
+    box-shadow: 0 0 30px rgba(0, 229, 255, 0.2);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 500px;
+    backdrop-filter: blur(10px);
+}
+
+.terminal-title {
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px var(--hacker-blue);
+}
+
+/* Main Planet Environment Viewport */
+#game-container {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.main-title {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(0, 229, 255, 0.6);
+    margin-top: 20px;
+}
+
+#planet-3d-viewport {
+    width: 70vh;
+    height: 70vh;
+    cursor: grab;
+}
+#planet-3d-viewport:active { cursor: grabbing; }
+
+/* HUD Control Panels */
+.holo-panel {
+    position: absolute;
+    background: var(--panel-bg);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 8px;
+    padding: 20px;
+    z-index: 10;
+}
+
+.right-panel {
+    bottom: 40px;
+    right: 40px;
+    width: 320px;
+}
+
+.avatar-preview-box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.avatar-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--hacker-blue);
+    background: radial-gradient(circle, var(--hacker-blue) 10%, transparent 70%);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avatar-icon::after { content: "👤"; font-size: 1.4rem; }
+
+.avatar-stats p { margin: 2px 0; font-size: 0.75rem; }
+.avatar-stats span { color: var(--hacker-blue); }
+
+.panel-divider { border: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--hacker-blue), transparent); margin: 15px 0; }
+
+.form-group { display: flex; flex-direction: column; margin-bottom: 12px; }
+.form-group label { font-size: 0.75rem; color: rgba(255,255,255,0.7); margin-bottom: 4px; }
+.form-group input, .form-group select { background: rgba(0, 0, 0, 0.6); border: 1px solid rgba(0, 229, 255, 0.2); padding: 10px; color: #fff; font-family: inherit; font-size: 0.8rem; border-radius: 4px; }
+.form-group select option {
+    background: rgba(5, 11, 28, 0.95);
+    color: #fff;
+}
+.gender-selector { display: flex; gap: 10px; font-size: 0.8rem; }
+.gender-btn { background: transparent; border: none; color: rgba(255,255,255,0.4); cursor: pointer; font-family: inherit; }
+.gender-btn.active { color: var(--hacker-blue); text-shadow: 0 0 8px var(--hacker-blue); }
+
+/* Sci-fi interface action buttons */
+.glow-button, .submit-btn {
+    background: transparent;
+    border: 1px solid var(--hacker-blue);
+    color: #fff;
+    padding: 12px 24px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+.glow-button:hover {
+    background: var(--hacker-blue);
+    color: #000;
+    box-shadow: 0 0 20px var(--hacker-blue);
+}
+
+.submit-btn { width: 100%; border-color: var(--hacker-purple); }
+.submit-btn:hover { background: var(--hacker-purple); box-shadow: 0 0 20px var(--hacker-purple); }
+
+.migration-note { position: absolute; bottom: 20px; font-size: 0.75rem; opacity: 0.6; }

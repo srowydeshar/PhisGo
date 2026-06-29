@@ -3,9 +3,9 @@ const closeBtn = document.getElementById("closeBtn");
 
 verifyBtn.addEventListener("click", function(e) {
     e.preventDefault();
-    window.location.href = "../mission1_html/mission_failed.html";
+    window.location.href = "mission_failed";
 });
 
 closeBtn.addEventListener("click", function(){
-    window.location.href = "../mission1_html/mission_success.html";
+    window.location.href = "mission_success";
 })

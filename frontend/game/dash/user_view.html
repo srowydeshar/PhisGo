@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhisGo - Cyber Security Control Matrix</title>
+    <link rel="stylesheet" href="user_view.css">
+</head>
+<body>
+
+    <header>
+        <div class="logosec">
+            <div class="logo">PhisGo <span class="matrix-version">v2.0.6</span></div>
+            <img src="/style/visuals/icons/logosec.png" class="icn menuicn" id="menuicn" alt="menu-icon">
+        </div>
+
+        <div class="user-matrix-badge">
+            <div class="user-avatar-mini"></div>
+            <div class="user-meta-mini">
+                <div class="meta-row">Handle: <span class="cyber-cyan">SSS</span></div>
+                <div class="meta-row">Role: <span class="cyber-purple">Teacher</span></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <button class="nav-option active" id="dashboard-btn">
+                        <img src="/style/visuals/icons/dashboard.png" class="nav-img" alt="dashboard" />
+                        <h3>Neural Dashboard</h3>
+                    </button>
+
+                    <button class="nav-option" id="scores-btn">
+                        <img src="/style/visuals/icons/scores.png" class="nav-img" alt="scores" />
+                        <h3>Core Scores</h3>
+                    </button>
+                        
+                    <button class="nav-option" id="progress-btn">
+                        <img src="/style/visuals/icons/progress.png" class="nav-img" alt="progress" />
+                        <h3>Matrix Progress</h3>
+                    </button>
+
+                    <button class="nav-option" id="news-btn">
+                        <img src="/style/visuals/icons/threat_news.png" class="nav-img" alt="threat news" />
+                        <h3>Threat Stream Feed</h3>
+                    </button>
+
+                    <button class="nav-option" id="profile-btn">
+                        <img src="/style/visuals/icons/profile.png" class="nav-img" alt="profile" />
+                        <h3>Avatar Manifest</h3>
+                    </button>
+                        
+                    <button class="nav-option logout" id="logout-btn">
+                        <img src="/style/visuals/icons/logout.png" class="nav-img" alt="logout" />
+                        <h3>Logout / Disconnect</h3>
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <main class="workspace-area">
+            
+            <div id="dashboard-page" class="page active">
+                
+                <div class="mission-deployment-hub">
+                    <button class="deployment-action-btn" id="game1-direct-btn">
+                        <span class="btn-glitch-text">START MISSION 1</span>
+                        <span class="btn-sub-text">(HACKORIA VECTOR SYSTEM DEPLOYMENT)</span>
+                    </button>
+                </div>
+
+                <div class="dashboard-content">
+                    <div class="dashboard-grid">
+                        
+                        <div class="game-card active-node" id="game1">
+                            <div class="card-tag">LIVE DEPLOYMENT</div>
+                            <h2>ACTIVE VECTOR:<br><span class="cyber-cyan">HACKORIA (MISSION 1)</span></h2>
+                            <p class="card-status-desc">Click node window area or top terminal deck to initialize system override vectors.</p>
+                        </div>
+
+                        <div class="game-card locked-node" id="game2">
+                            <div class="card-tag secure">SECURE NODE</div>
+                            <h2>SECTOR NODE:<br><span class="cyber-white">SAFENET RED TEAM</span></h2>
+                            <p class="card-status-desc">Encrypted firewall channels detected. Clear Vector 1 protocols to authenticate access keys.</p>
+                        </div>
+
+                        <div class="game-card locked-node" id="game3">
+                            <div class="card-tag restricted">AWAITING AUTH</div>
+                            <h2>DATASTREAM:<br><span class="cyber-purple">CLICKONIA REGISTRY</span></h2>
+                            <p class="card-status-desc">Deep packet tracking node modules currently waiting on baseline identity authorization profiles.</p>
+                        </div>
+
+                        <div class="game-card locked-node" id="othergames">
+                            <div class="card-tag restricted">AWAITING AUTH</div>
+                            <h2>DEEP MATRIX:<br><span class="cyber-purple">MALWAREA DECRYPTION</span></h2>
+                            <p class="card-status-desc">Sub-layer matrix node paths currently isolated. Maintain clearance validation parameters.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div id="scores-page" class="page">
+                <div class="score-content interior-terminal-card">
+                    <h1>Core Score Registry</h1>
+                    <hr class="terminal-divider">
+                    <div class="score-table">
+                        <p>Total Decryption Score: <span class="cyber-cyan">500 XP</span></p>
+                        <p>Highest Matrix Run: <span class="cyber-purple">700 XP</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="progress-page" class="page">
+                <div class="interior-terminal-card">
+                    <h1>Matrix Progress Subsystem</h1>
+                    <hr class="terminal-divider">
+                    <p>Current completion rate across sector metrics: <span class="cyber-cyan">14.2%</span></p>
+                </div>
+            </div>
+
+            <div id="news-page" class="page">
+                <div class="interior-terminal-card">
+                    <h1>Threat Stream Feed Log</h1>
+                    <hr class="terminal-divider">
+                    <p class="cyber-red">[ALERT] Intercepted phishing packet flood detected in Hackoria grid streams.</p>
+                </div>
+            </div>
+
+            <div id="profile-page" class="page">
+                <div class="interior-terminal-card">
+                    <h1>Avatar Identity Manifest</h1>
+                    <hr class="terminal-divider">
+                    <p>Operator Class Authorization: <span class="cyber-purple">Clearance Verified</span></p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="user_view.js"></script>
+</body>
+</html>
